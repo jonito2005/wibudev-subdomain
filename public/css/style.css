@@ -1,0 +1,436 @@
+:root {
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+    width: 100%;
+    max-width: 28rem;
+    margin: 1rem auto;
+}
+
+.glass-input {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 500;
+}
+
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}
+
+.glass-button {
+    background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    border: none;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+    transition: all 0.3s ease;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.glass-button:hover {
+    background: linear-gradient(135deg, #4338ca 0%, #3730a3 100%);
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.glass-button:active {
+    transform: translateY(0) !important;
+}
+
+/* Responsive container width */
+@media (max-width: 640px) {
+    .glass {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+/* Adjust input padding on mobile */
+@media (max-width: 640px) {
+    .glass-input {
+        padding: 0.5rem;
+    }
+}
+
+/* Ensure text doesn't overflow on small screens */
+input, button, span {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 640px) {
+    button, input, span {
+        min-height: 44px; /* Minimum touch target size */
+    }
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.container {
+    min-height: calc(100vh - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-height: 700px) {
+    .container {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .glass {
+        margin: 0.5rem auto;
+    }
+}
+
+@media (max-height: 600px) {
+    .container {
+        padding: 1rem 0;
+    }
+    
+    form.space-y-4 > div {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Background styling */
+#particles-js {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+label {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* Success message styling */
+.success-message {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Error message styling */
+.error-message {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Admin specific styles */
+.glass-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.glass-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.glass-table td, .glass-table th {
+    padding: 1rem;
+    transition: all 0.2s;
+}
+
+.glass-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Admin buttons */
+.admin-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.admin-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.admin-button.danger {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.admin-button.danger:hover {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+/* Admin form inputs */
+.admin-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.admin-input:focus {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+/* Alert messages */
+.alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.alert-error {
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fecaca;
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #a7f3d0;
+}
+
+/* Dashboard specific styles */
+.glass-button-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+}
+
+.glass-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.glass-input {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.2s;
+}
+
+.glass-input:focus {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+    outline: none;
+}
+
+/* Table styles */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Modal styles */
+.modal-backdrop {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    th, td {
+        padding: 0.75rem 1rem;
+    }
+    
+    .glass {
+        padding: 1rem;
+    }
+}
+
+/* Animation classes */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+/* Input styles */
+input, select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    transition: all 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+    .glass {
+        padding: 1rem;
+    }
+    
+    .domain-list {
+        font-size: 0.875rem;
+    }
+    
+    .domain-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .button-text {
+        display: none;
+    }
+    
+    .icon-only {
+        display: block;
+    }
+}
+
+@media (min-width: 641px) {
+    .button-text {
+        display: inline;
+    }
+    
+    .icon-only {
+        display: none;
+    }
+}
+
+/* Sweet Alert custom styles */
+.swal2-popup.glass {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3) !important;
+}
+
+.swal2-popup.glass .swal2-title,
+.swal2-popup.glass .swal2-html-container {
+    color: white !important;
+}
+
+.swal2-popup.glass .swal2-confirm {
+    background: rgba(99, 102, 241, 0.8) !important;
+}
+
+/* Sweet Alert Custom Styles */
+.glass-modal {
+    background: rgba(17, 25, 40, 0.8) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 1rem !important;
+    padding: 2rem !important;
+}
+
+.swal2-title {
+    color: white !important;
+    font-family: var(--font-heading) !important;
+}
+
+.swal2-html-container {
+    color: #94a3b8 !important;
+}
+
+.swal2-icon {
+    border-color: #6366f1 !important;
+    color: #6366f1 !important;
+}
+
+.swal2-success-ring {
+    border-color: #22c55e !important;
+}
+
+.swal2-success-line-tip,
+.swal2-success-line-long {
+    background-color: #22c55e !important;
+} 
