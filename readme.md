@@ -23,7 +23,7 @@ Sistem manajemen subdomain terintegrasi dengan Cloudflare yang memungkinkan peng
 
 1. Clone repositori
    ```bash
-   git clone https://github.com/username/wibudev-subdomain.git
+   git clone https://github.com/jonito2005/wibudev-subdomain.git
    cd wibudev-subdomain
    ```
 
