@@ -1,0 +1,75 @@
+<%- include('../partials/header') %>
+
+<div class="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+    <div class="w-full max-w-4xl glass rounded-xl p-6 lg:p-8">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white mb-8 font-heading tracking-tight">
+            <i class="fas fa-scroll text-indigo-400 mr-3"></i>Ketentuan & Layanan
+        </h1>
+
+        <div class="space-y-6 text-gray-300">
+            <section class="space-y-3">
+                <h2 class="text-xl font-semibold text-white flex items-center">
+                    <i class="fas fa-shield-alt text-indigo-400 mr-2"></i>
+                    Penggunaan yang Diizinkan
+                </h2>
+                <p>Layanan subdomain WibuDev.moe hanya boleh digunakan untuk tujuan yang legal dan tidak melanggar hukum yang berlaku. Dilarang menggunakan layanan ini untuk:</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><i class="fas fa-ban text-red-400 mr-2"></i>Aktivitas ilegal atau melanggar hukum</li>
+                    <li><i class="fas fa-virus text-red-400 mr-2"></i>Menyebarkan malware atau virus</li>
+                    <li><i class="fas fa-user-secret text-red-400 mr-2"></i>Phishing atau penipuan</li>
+                    <li><i class="fas fa-radiation text-red-400 mr-2"></i>Konten berbahaya atau tidak pantas</li>
+                </ul>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-xl font-semibold text-white flex items-center">
+                    <i class="fas fa-clock text-indigo-400 mr-2"></i>
+                    Batasan Penggunaan
+                </h2>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><i class="fas fa-hourglass-half text-yellow-400 mr-2"></i>Setiap IP dibatasi membuat 1 subdomain per jam</li>
+                    <li><i class="fas fa-server text-yellow-400 mr-2"></i>Subdomain harus terhubung ke IP server yang valid</li>
+                    <li><i class="fas fa-shield-virus text-yellow-400 mr-2"></i>Cloudflare Proxy dapat diaktifkan atau dinonaktifkan sesuai kebutuhan</li>
+                </ul>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-xl font-semibold text-white flex items-center">
+                    <i class="fas fa-key text-indigo-400 mr-2"></i>
+                    Kode Unik & Manajemen
+                </h2>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><i class="fas fa-fingerprint text-green-400 mr-2"></i>Setiap subdomain memiliki kode unik untuk manajemen</li>
+                    <li><i class="fas fa-edit text-green-400 mr-2"></i>Pemilik subdomain dapat mengubah IP server dan status proxy</li>
+                    <li><i class="fas fa-trash-alt text-green-400 mr-2"></i>Subdomain dapat dihapus kapan saja oleh pemiliknya</li>
+                </ul>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-xl font-semibold text-white flex items-center">
+                    <i class="fas fa-exclamation-triangle text-indigo-400 mr-2"></i>
+                    Pelaporan Penyalahgunaan
+                </h2>
+                <p>
+                    <i class="fas fa-flag text-red-400 mr-2"></i>
+                    Jika Anda menemukan subdomain yang melanggar ketentuan ini, silakan laporkan melalui tombol "Laporkan Penyalahgunaan" yang tersedia di halaman utama.
+                </p>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-xl font-semibold text-white flex items-center">
+                    <i class="fas fa-gavel text-indigo-400 mr-2"></i>
+                    Sanksi
+                </h2>
+                <p>Kami berhak untuk:</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><i class="fas fa-ban text-red-400 mr-2"></i>Menonaktifkan subdomain yang melanggar ketentuan</li>
+                    <li><i class="fas fa-user-slash text-red-400 mr-2"></i>Memblokir IP yang melakukan penyalahgunaan</li>
+                    <li><i class="fas fa-trash text-red-400 mr-2"></i>Menghapus subdomain tanpa pemberitahuan jika terbukti melanggar</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
